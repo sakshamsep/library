@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class="cards">
+
+     <div class="book-card">
+        <h2 class="book-heading"></h2>
+        <p class="book-author"></p>
+        <p class="book-page"></p>
+        <p class="book-status"></p>
+    </div>
+
+    </div>
+
+  
+<button class="newbook">New Book</button>
+<dialog class="myDialog">
+
+    <form method="dialog" id="form">
+
+        <label for="">
+
+        BookName :
+        <input type="text" name = "nameOfBook" placeholder="name of book" >
+        <br><br>
+        AuthorName :
+        <input type="text" name = "nameOfAuthor" placeholder="name of the author">
+        <br><br>
+        NumberOfPages :
+        <input type="text" name = "numberOfPages" placeholder="number of pages">
+        <br><br>
+        ReadStatus :
+        <input type="text" name = "readStatus" placeholder="Read/Unread">
+
+        </label>
+<br><br>
+        <button type="submit" class="submit">Submit</button>
+    <button class="closeBtn" value="cancel">Close</button>  
+    </form>
+
+</dialog>
+    <script src = "link.js"></script>
+</body>
+</html>
