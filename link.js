@@ -72,7 +72,8 @@ submit.addEventListener('click',(event) => {
      numberOfPages = formData.get('numberOfPages');
      readStatus = formData.get('readStatus');
    
-
+form.reset();
+myDialog.close()
     addBookToLibrary(`${nameOfBook}`,`${authorName}`,`${numberOfPages}`,`${readStatus}`);
     //  card.textContent = myLibrary;
     
@@ -92,8 +93,8 @@ bookStatus.classList.add('book-status');
 deleteBook.classList.add('deleteBook');
 
 bookHeading.textContent = nameOfBook;
-bookAuthor.textContent = authorName;
-bookPage.textContent = numberOfPages;
+bookAuthor.textContent = `by ${authorName}`;
+bookPage.textContent = `${numberOfPages} Pages`;
 bookStatus.textContent = readStatus;
 deleteBook.textContent = "Delete Book";
 
@@ -108,6 +109,7 @@ card.appendChild(bookCard);
 deleteBook.addEventListener('click',() =>  {
 
     card.removeChild(bookCard)
+    
     
 })
 

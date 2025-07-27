@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,21 +22,24 @@
 <button class="newbook">New Book</button>
 <dialog class="myDialog">
 
-    <form method="dialog" id="form"  autocomplete="off">
+    <form method="dialog" id="form" >
  
         <label>
 
-        BookName :
-        <input type="text" name = "nameOfBook" placeholder="name of book" >
+        Book Name :
+        <input type="text" name = "nameOfBook" placeholder="name of book"  >
         <br><br>
-        AuthorName :
-        <input type="text" name = "nameOfAuthor" placeholder="name of the author">
+        Author Name :
+        <input input = "text" class="author-name" name = "nameOfAuthor" placeholder="name of the author" >
         <br><br>
-        NumberOfPages :
-        <input type="text" name = "numberOfPages" placeholder="number of pages">
+        Number Of Pages :
+        <input type="number" name = "numberOfPages" placeholder="number of pages" >
         <br><br>
-        ReadStatus :
-        <input type="text" name = "readStatus" placeholder="Read/Unread">
+        Read Status :
+        <select name="readStatus" id="readStatus">
+            <option value="read">Read</option>
+            <option value="unread">Unread</option>
+        </select>
 
         </label>
 <br><br>
