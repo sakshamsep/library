@@ -78,7 +78,7 @@ submit.addEventListener('click',(event) => {
      readStatus = formData.get('readStatus');
    
 form.reset();
-
+myDialog.close()
     addBookToLibrary(`${nameOfBook}`,`${authorName}`,`${numberOfPages}`,`${readStatus}`);
     //  card.textContent = myLibrary;
     
