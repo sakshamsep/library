@@ -49,18 +49,30 @@ let nameOfBook;
 let authorName;
 let numberOfPages;
 let readStatus;
-form.addEventListener('click',() => {
+
+// form.addEventListener('click',(e) => {
+   
+//      formData = new FormData(form);
+//      nameOfBook = formData.get('nameOfBook');
+//      authorName = formData.get('nameOfAuthor');
+//      numberOfPages = formData.get('numberOfPages');
+//      readStatus = formData.get('readStatus');
+   
+// })
+// form.reset();
+
+const submit = document.querySelector(".submit")
+submit.addEventListener('click',(event) => {
+    event.preventDefault();
+
+
      formData = new FormData(form);
      nameOfBook = formData.get('nameOfBook');
      authorName = formData.get('nameOfAuthor');
      numberOfPages = formData.get('numberOfPages');
      readStatus = formData.get('readStatus');
+   
 
-})
-
-const submit = document.querySelector(".submit")
-submit.addEventListener('click',(event) => {
-    // event.preventDefault();
     addBookToLibrary(`${nameOfBook}`,`${authorName}`,`${numberOfPages}`,`${readStatus}`);
     //  card.textContent = myLibrary;
     
