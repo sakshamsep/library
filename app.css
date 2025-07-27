@@ -7,16 +7,22 @@
 {
     display: flex;
     border: 4px solid black;
-    width: 75%;
+    width: auto;
     height: auto;
-    margin: auto;
+    margin: 0 auto;
     padding: 25px;
+    gap: 5px;
+    flex-wrap: wrap;
 
 
 }
 
 .book-card 
 {
+    
+    background-color: rgb(150, 160, 95);
     margin: 5px;
+    padding: 5px 15px;
     border: 1px solid black;
+    font-family: 'Times New Roman', Times, serif;
 }

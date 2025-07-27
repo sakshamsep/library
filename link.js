@@ -1,4 +1,4 @@
-const myLibrary = ["b","c","d"];
+const myLibrary = [];
 
 function Book(title,author,pages,read_status)
 {
@@ -16,9 +16,12 @@ function Book(title,author,pages,read_status)
 
 function addBookToLibrary(title,author,pages,read_status) {
     const book = new Book(title,author,pages,read_status);
-    myLibrary.push(book.title);
+    myLibrary.push(book);
 
 }
+
+
+
 
 const card = document.querySelector(".cards")
  card.textContent = myLibrary;
@@ -59,7 +62,56 @@ const submit = document.querySelector(".submit")
 submit.addEventListener('click',(event) => {
     // event.preventDefault();
     addBookToLibrary(`${nameOfBook}`,`${authorName}`,`${numberOfPages}`,`${readStatus}`);
-     card.textContent = myLibrary;
+    //  card.textContent = myLibrary;
+    
+const bookCard = document.createElement('div')
+const bookHeading = document.createElement('h2')
+const bookAuthor = document.createElement('p')
+const bookPage = document.createElement('p')
+const bookStatus = document.createElement('p')
+const deleteBook = document.createElement('button');
+
+
+bookCard.classList.add('book-card');
+bookHeading.classList.add('book-heading');
+bookAuthor.classList.add('book-author');
+bookPage.classList.add('book-page');
+bookStatus.classList.add('book-status');
+deleteBook.classList.add('deleteBook');
+
+bookHeading.textContent = nameOfBook;
+bookAuthor.textContent = authorName;
+bookPage.textContent = numberOfPages;
+bookStatus.textContent = readStatus;
+deleteBook.textContent = "Delete Book";
+
+bookCard.appendChild(bookHeading)
+bookCard.appendChild(bookAuthor)
+bookCard.appendChild(bookPage)
+bookCard.appendChild(bookStatus)
+bookCard.appendChild(deleteBook)
+
+card.appendChild(bookCard);
+
+deleteBook.addEventListener('click',() =>  {
+
+    card.removeChild(bookCard)
+    
+})
+
+
 })
 // addBookToLibrary("a","b","c","d");
 // displayCards();
+// for (currentBook of myLibrary)
+// {
+
+//     bookHeading.textContent = currentBook.title;
+//     bookAuthor.textContent = currentBook.author;
+//     bookPage.textContent = currentBook.pages;
+//     bookStatus.textContent = currentBook.read_status
+
+//     card.appendChild(bookCard);
+// }
+
+// const deleteBtn = document.querySelector(".deleteBook")
