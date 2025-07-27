@@ -59,12 +59,17 @@ let readStatus;
 //      readStatus = formData.get('readStatus');
    
 // })
-// form.reset();
-
+// form.reset();;
+const form = document.querySelector("form")
 const submit = document.querySelector(".submit")
+
 submit.addEventListener('click',(event) => {
     event.preventDefault();
 
+  if (!form.checkValidity()) {
+    form.reportValidity(); // show built-in browser validation messages
+    return; // don't continue
+  }
 
      formData = new FormData(form);
      nameOfBook = formData.get('nameOfBook');
@@ -73,7 +78,7 @@ submit.addEventListener('click',(event) => {
      readStatus = formData.get('readStatus');
    
 form.reset();
-myDialog.close()
+
     addBookToLibrary(`${nameOfBook}`,`${authorName}`,`${numberOfPages}`,`${readStatus}`);
     //  card.textContent = myLibrary;
     
@@ -114,6 +119,11 @@ deleteBook.addEventListener('click',() =>  {
 })
 
 
+})
+
+const dialogClose = document.querySelector(".closeBtn");
+dialogClose.addEventListener('click',() => {
+    myDialog.close();
 })
 // addBookToLibrary("a","b","c","d");
 // displayCards();
