@@ -1,6 +1,10 @@
 const myLibrary = [];
 
-function Book(title,author,pages,read_status)
+
+
+class Book {
+
+    constructor (title,author,pages,read_status)
 {
     this.title = title;
     this.author = author;
@@ -14,12 +18,17 @@ function Book(title,author,pages,read_status)
     }
 }
 
-function addBookToLibrary(title,author,pages,read_status) {
+}
+
+
+class addBookToLibrary
+{
+constructor (title,author,pages,read_status) {
     const book = new Book(title,author,pages,read_status);
     myLibrary.push(book);
 
 }
-
+}
 
 
 
@@ -79,7 +88,7 @@ submit.addEventListener('click',(event) => {
    
 form.reset();
 myDialog.close()
-    addBookToLibrary(`${nameOfBook}`,`${authorName}`,`${numberOfPages}`,`${readStatus}`);
+   // addBookToLibrary(`${nameOfBook}`,`${authorName}`,`${numberOfPages}`,`${readStatus}`);
     //  card.textContent = myLibrary;
     
 const bookCard = document.createElement('div')

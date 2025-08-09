@@ -95,6 +95,7 @@ button , input,select
 button:hover 
 {
     background-color: rgb(255, 210, 152);
+    cursor: pointer;
 }
 .submit {
     margin-top: 10px;margin-right: 5px;
